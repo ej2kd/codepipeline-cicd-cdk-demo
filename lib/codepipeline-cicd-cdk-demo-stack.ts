@@ -17,7 +17,8 @@ export class CodepipelineCicdCdkDemoStack extends cdk.Stack {
           "ej2kd/codepipeline-cicd-cdk-demo",
           "main"
         ),
-        commands: ["npm ci", "npm run build", "npx cdk synth"],
+        installCommands: ["npm i -g npm@latest"],
+        commands: ["npm -v", "npm ci", "npm run build", "npx cdk synth"],
       }),
     });
   }
